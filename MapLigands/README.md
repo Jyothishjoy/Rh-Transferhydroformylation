@@ -19,6 +19,7 @@ obabel *.mol -oxyz -m
 This title info can be reformatted as an Aaron tools recognizable data. Just reformat the connectivity info in the following format. K:1,2; where, 1 and 2 are the connecting atoms. 
 Use python to automate this.
 
+~~~ Python
 import os
 directory_path = os.getcwd()
 for filename in os.listdir(directory_path):
@@ -35,6 +36,7 @@ for filename in os.listdir(directory_path):
             with open(file_path, 'w') as file:
                 file.writelines(lines)
 print("Content in the second line of each .xyz file has been replaced.")
+~~~
 
 
 3. Now, the correctly formatted xyz files of the ligands can be deposited to the Aaron tools custom library.
