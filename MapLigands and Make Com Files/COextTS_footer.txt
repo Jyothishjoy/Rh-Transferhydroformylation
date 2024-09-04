@@ -1,0 +1,14 @@
+B 1 2 F
+B 1 4 F
+B 2 4 F
+
+--Link1--
+%oldchk=Rh-PP-CO-extrusion-TS.chk
+%nprocshared=12
+%mem=24GB
+# opt=(ts,readfc,nofreeze,noeigen,maxcycles=1000) guess=read geom=allchk 
+freq=noraman scrf=(smd,solvent=THF) def2svp int=grid=ultrafine m06l
+scf=(xqc,maxcycles=1000)
+
+
+
