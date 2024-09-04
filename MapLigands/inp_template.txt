@@ -1,0 +1,7 @@
+%mem=24GB
+%nprocs=12
+# Opt=(MaxCycles=500) Freq=NoRaman M06L/def2SVP scf=(MaxCycles=500) Temperature=298.15 
+
+Title
+
+0 1
