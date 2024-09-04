@@ -1,6 +1,6 @@
 # How to use AaronTool's MapLigand Functionality to do MultiSubstitutions
 
-mapligands.py script uses AaronTool's MapLigand functionality to mount all bidentate ligands from AaronTools library into the PP-template.xyz file. 
+'mapligands.sh' script uses AaronTool's MapLigand functionality to mount all bidentate ligands from AaronTools library into the 'PP-template.xyz' file. 
 
 ## How to add new ligands to the Aaron_library?
 https://aarontools.readthedocs.io/en/latest/other_docs/libraries.html
@@ -8,7 +8,7 @@ https://aarontools.readthedocs.io/en/latest/other_docs/libraries.html
 Windows:
 One can add desired ligands to Aaron tools custom library located under "C:\Users\jyothish\Aaron_libs"
 
-There need to have some preprocessing before adding ligands to the library.
+There needs to be some preprocessing before adding ligands to the library.
 
 1. If you are starting from mol files (eg: in ReaLigands), convert them first into xyz files using openbabel with the following command;
 
@@ -59,6 +59,6 @@ Then execute mapLigands on top of the selected ones using mapLigand.py template.
 -l represents the ligand, 1,2 are the positions for the bidentate ligand to get replaced at the template file.
 
 5. This script will generate many complexes in the xyz format.
-input_maker.py will use the inp_template.txt and above generated xyz files to create Gaussian input files.
+'input_maker.py' will use the 'inp_template.txt' and above generated xyz files to create Gaussian input files.
 
-6. submit.sh script will submit the Gaussian .com files to the supercomputer.
+6. 'submit.sh' script will submit the Gaussian .com files to the supercomputer.
