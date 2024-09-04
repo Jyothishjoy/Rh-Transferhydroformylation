@@ -12,7 +12,9 @@ There need to have some preprocessing before adding ligands to the library.
 
 1. If you are starting from mol files (eg: in ReaLigands), convert them first into xyz files using openbabel with the following command;
 
+~~~ Python
 obabel *.mol -oxyz -m
+~~~
 
 
 2. Thus generated XYZ file retains (luckly!) the ligand connectivity info from ReaLigands as the title of the XYZ file. 
@@ -43,12 +45,13 @@ print("Content in the second line of each .xyz file has been replaced.")
 
 4. One can use command line scripts to generate bulk ligand substitutions. Use the following shell script:
 
-
+~~~ Python
 #!/bin/env bash
 
 for lig in `mapLigand.py -ls elements:P,P`; do
     mapLigand.py PP-template.xyz -l 1,2=$lig -o $lig.xyz;
 done
+~~~
 
 Save this as a sh file and execute. -ls lists all the ligands, and sort based on the connecting elements P,P. 
 We can also use denticity:2 to sort all the bidentate ligands. 
