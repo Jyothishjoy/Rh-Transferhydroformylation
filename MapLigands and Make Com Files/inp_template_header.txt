@@ -1,0 +1,7 @@
+%NProcShared=12
+%Mem=24GB
+#n M06L/def2SVP scf=(xqc,MaxCycles=1000) OPT=(MaxCycles=1000) Freq=(NoRaman) scrf=(smd,solvent=THF) int=(grid=ultrafine) 
+
+Rh-PP
+
+0 1

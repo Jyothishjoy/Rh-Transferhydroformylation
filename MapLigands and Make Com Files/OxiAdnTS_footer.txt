@@ -1,0 +1,12 @@
+B 1 20 F
+B 1 21 F
+B 20 21 F	
+
+--Link1--
+%oldchk=Rh-PP-BzO-Aldehyde-OxiAddn-TS.chk
+%nprocshared=12
+%mem=24GB
+# opt=(ts,readfc,nofreeze,noeigentest,maxcycles=200) freq=noraman guess=read geom=allchk 
+scrf=(smd,solvent=THF) def2svp int=grid=ultrafine m06l scf=(xqc,maxcycles=1000)
+
+
