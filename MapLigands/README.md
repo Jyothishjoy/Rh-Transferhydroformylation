@@ -1,6 +1,8 @@
-mapligands.py script use AaronTool's MapLigands functionality to mount all bidentate ligands from AaronTools library into the PP-template.xyz file. 
+# How to use AaronTool's MapLigand Functionality to do MultiSubstitutions
 
-How to add new ligands to the Aaron_library?
+mapligands.py script uses AaronTool's MapLigand functionality to mount all bidentate ligands from AaronTools library into the PP-template.xyz file. 
+
+## How to add new ligands to the Aaron_library?
 https://aarontools.readthedocs.io/en/latest/other_docs/libraries.html
 
 Windows:
@@ -19,7 +21,6 @@ Use python to automate this.
 
 import os
 directory_path = os.getcwd()
-# Iterate over files in the directory
 for filename in os.listdir(directory_path):
     if filename.endswith('.xyz'):
         file_path = os.path.join(directory_path, filename)
@@ -50,9 +51,9 @@ done
 Save this as a sh file and execute. -ls lists all the ligands, and sort based on the connecting elements P,P. 
 We can also use denticity:2 to sort all the bidentate ligands. 
 Then execute mapLigands on top of the selected ones using mapLigand.py template.xyz -l 1,2=$lig -o $lig.xyz. 
--l represents the ligand, 1,2 are the position for the bidentate ligand to get replaced at the template file.
+-l represents the ligand, 1,2 are the positions for the bidentate ligand to get replaced at the template file.
 
-5. This script will generate a large number of complexes in the xyz format.
-input_maker.py will use the inp_template.txt file and generated xyz files to create Gaussian input files.
+5. This script will generate many complexes in the xyz format.
+input_maker.py will use the inp_template.txt and above generated xyz files to create Gaussian input files.
 
 6. submit.sh script will submit the Gaussian .com files to the supercomputer.
